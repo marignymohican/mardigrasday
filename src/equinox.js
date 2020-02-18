@@ -7,38 +7,6 @@ export function calc(year) {
     return calcEquiSol( 1, year );
 }
 
-function valiDate(d){ 
-        // Validates that the input year is a valid integer between -4712 to +3500
-        // Returns true if valid, false if not
-        var i,j;
-        if (d === "") {
-            alert("Please enter a value for the \"Year\" field.");
-            return false;
-        }
-        var checkOK = "0123456789-+"; // valid character list
-        var checkStr = d;
-        var allValid = true;
-        for ( i = 0;  i < checkStr.length;  i++) {
-            for (j = 0;  j < checkOK.length;  j++) {
-                if (checkStr.charAt(i) === checkOK.charAt(j)) {
-                    break;
-                }
-            }
-            if (j === checkOK.length) {
-                allValid = false;
-                break;
-            }
-        }
-        if ( !allValid ) {
-            alert("Please enter only digit characters and \"+\" or \"-\" in the \"Year\" field.");
-            return false;
-        }
-        if ( ( d < 1000 ) || ( d > 3000 ) ) {
-            alert("Please enter a value greater than or equal to \"1000\" and less than or equal to \"3000\" in the \"Year\" field.");
-            return false;
-        }
-        return true;
-    }
 
     //-----Calculate and Display a single event for a single year (Either a Equiniox or Solstice)
     // Meeus Astronmical Algorithms Chapter 27
