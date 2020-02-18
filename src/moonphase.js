@@ -4,7 +4,31 @@
 function INT(  n )  { return Math.floor( n ); } 	//Emulates BASIC's INT Funtion
 function POW2( n )  { return Math.pow( n, 2 );}	//Square a number
 
-
+function valiDate( year ){ 
+ // Validates that the input year is a valid integer between -4712 to +3500
+ // Returns true if valid, false if not
+ if (year === "") {
+    alert("Please enter a value for the \"Year\" field.");
+    return false;
+  }
+  var checkOK = "0123456789-+"; // valid character list
+  var checkStr = year;
+  var allValid = true;
+  for (var i = 0;  i < checkStr.length;  i++) {
+    for (var j = 0;  j < checkOK.length;  j++) 
+      { if (checkStr.charAt(i) === checkOK.charAt(j)) { break; } }
+    if (j === checkOK.length) { allValid = false; break; }
+  }
+  if ( !allValid ) {
+    alert("Please enter only digit characters and \"+\" or \"-\" in the \"Year\" field.");
+    return false;
+  }
+  if ( ( year < -4712 ) || ( year > 3500 ) ) {
+    alert("Please enter a value greater than or equal to \"-4712\" and less than or equal to \"+3500\" in the \"Year\" field.");
+    return false;
+  }
+  return true;
+}
 //-----Correct TDT to UTC----------------------------------------------------------------
 // Meeus Astronomical Algorithms Chapter 10
 function fromTDTtoUTC( tobj ) {
