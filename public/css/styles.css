@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    font-family: sans-serif;
+    
+    /* pantone colors */
+    --Purple: #BB29BB; /* purple c 187 41 187 */
+    --Gold: #B49B57; /* Rich Gold 180 155 87 */
+    --Green:  #00AB84; /* green c 0 171 132 */
+}
+
+body {
+    background-color: var(--Green);
+    color: var(--Purple);
+}
+
+#mardigrasday {
+    margin: 20px auto;
+    width: 600px;
+}
