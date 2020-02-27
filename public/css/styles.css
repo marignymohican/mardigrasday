@@ -8,6 +8,9 @@
     --Purple: #BB29BB; /* purple c 187 41 187 */
     --Gold: #B49B57; /* Rich Gold 180 155 87 */
     --Green:  #00AB84; /* green c 0 171 132 */
+    
+    /* better colors */
+    --Purple: #7f1c7f;
 }
 
 body {
@@ -15,7 +18,104 @@ body {
     color: var(--Purple);
 }
 
+a {
+    text-decoration: underline;
+    font-size: 0.8em;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+h2 {
+    font-size: 1.75em;
+    text-align: center;
+}
+h3 {
+    font-size: 1.5em;
+}
+
+#main {
+    margin: 10px auto;
+    padding: 0 15px;
+    max-width: 600px
+}
+
 #mardigrasday {
     margin: 20px auto;
-    width: 600px;
+    padding: 0 15px;
+    max-width: 600px;
+}
+
+.MGinput {
+    display: flex;
+    margin: 15px auto;
+    height: 3em;
+    justify-content: center;
+    align-items: center;
+}
+.MGinput input,
+.MGinput select {
+    max-width: 4em;
+    background-color: #fce8b5;
+    border: none;
+    border-radius: 10px;
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+}
+.MGinput select {
+    color: #6E5B6E;
+}
+.MGinput select option {
+    font-size: 0.3em;
+}
+#MGbirthday.MGinput input {
+    max-width: 2em;
+}
+.MGinput input:last-of-type {
+    margin-left: 5px;
+}
+.MGinput .incDec {
+    margin: 0 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.results {
+    margin-bottom: 50px;
+}
+.results .calculator {
+    margin-bottom: 15px;
+}
+.results .calculator ul {
+    list-style-type: none;
+}
+.results .calculator .mgresult {
+    margin-bottom: 10px;
+    margin-left: 25px;
+    font-size: 1.15em;
+}
+.results .fattuesday {
+    padding: 4px;
+    border: 2px solid #000;
+    border-color: var(--Purple);
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.results.myBD {
+    display: inline-block;
+}
+.results .BDyear {
+    display: inline-block;
+    margin: 4px 5px;
+    font-size: 1.25em;
+}
+
+.myBD {
+    min-height: 200px;
+    text-align: center;
 }

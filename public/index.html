@@ -10,15 +10,17 @@
 </head>
 <body>
     
-    <h1>Mardi Gras Day</h1>
-    <p>Get the date of Mardi Gras for any year (<a href="">within reason</a>)</p>
-    <div id="mardigrasday">
-        
-        <input type="text" placeholder="2000" />
-        
-        <div id="result"></div>
+    <div id="main">
+        <h1>Mardi Gras Day</h1>
+        <p>Get the date of Mardi Gras for any year <a onClick="popupinfo();">(within&nbsp;reason)</a></p>
     </div>
+    <div id="mardigrasday"></div>
     
+    <script>
+        function popupinfo() {
+            alert('This calculator only works in the Gregorian calendar (i.e. after 1582).\n\nFor performance purposes, it only goes up to the year 5000.');
+        }
+    </script>
 
 </body>
 </html>
